@@ -50,7 +50,7 @@
                     <li class="nav-item">
                         @if (Route::has('login'))
                             @auth
-                                <a style="right: 10px; position: absolute;" href="{{ url('/dashboard') }}" class="nav-link underline">Dashboard</a>
+                                <a style="right: 10px; position: absolute;" href="{{ route('dashboard') }}" class="nav-link underline">Dashboard</a>
                             @else
                                 <a style="right: 10px; position: absolute;" href="{{ route('login') }}" class="nav-link underline">Log in</a>
 

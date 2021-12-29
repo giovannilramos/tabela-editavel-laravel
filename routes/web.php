@@ -30,8 +30,6 @@ Route::put('/editar/{id}', [PlanilhaController::class, 'update'])->name('update'
 Route::delete('/cancelar/{id}', [PlanilhaController::class, 'cancelar'])->name('cancelar')->middleware('auth')->can('adm');
 Route::delete('/planilha/deletar/{id}', [PlanilhaController::class, 'destroy'])->name('delete')->middleware('auth')->can('adm');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [PlanilhaController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

@@ -560,4 +560,8 @@ class PlanilhaController extends Controller
         Planilha::where('id', $id)->delete();
         return redirect('/');
     }
+
+    public function dashboard() {
+        return view('dashboard');
+    }
 }
